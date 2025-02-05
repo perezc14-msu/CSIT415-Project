@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <title>Job Application Tracker</title>
+        <title>Jobflow</title>
       </Head>
       <body>
         <Navbar />
