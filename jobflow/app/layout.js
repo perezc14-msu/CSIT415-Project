@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
           </nav>
           <main className="p-4">{children}</main>
           <footer className="bg-gray-800 p-4 text-white text-center">
-            <p>© 2025 Jobflow</p>
+            <p>© 2025 JobFlow</p>
           </footer>
         </body>
       </html>
