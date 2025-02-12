@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
         <body>
           <Navbar />
           <nav className="bg-blue-600 p-4 text-white">
-            <h1 className="text-2xl font-bold"> Job Application Tracker </h1>
+            <h1 className="text-2xl font-bold"><center>Job Application Tracker</center> </h1>
             <div>
               <SignedOut>
                 <SignInButton />
