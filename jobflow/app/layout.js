@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <Head>
-          <title>Job Flow</title>
+          <title><center>Job Flow</center></title>
         </Head>
         <body>
           <Navbar />
