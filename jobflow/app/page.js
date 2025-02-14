@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <div className="p-4">
       <h1>Welcome{welcomeSuffix} 👋!</h1>
-      <p>Welcome to your job application dashboard!</p>
+      <p>Welcome to your job tracker dashboard!</p>
     </div>
   );
 }

@@ -12,8 +12,8 @@ export default function RootLayout({ children }) {
         </Head>
         <body>
           <Navbar />
-          <nav className="bg-blue-600 p-4 text-white">
-            <h1 className="text-2xl font-bold"><center>Job Application Tracker</center> </h1>
+          <nav className="bg-purple-600 p-4 text-white">
+            <h1 className="text-2xl font-bold"><center>Job Flow</center> </h1>
             <div>
               <SignedOut>
                 <SignInButton />
