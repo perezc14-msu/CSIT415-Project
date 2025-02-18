@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Add New Job Applicatons</h1>
+    <form id="applicationForm">
+        <label for="Company">Company:</label><br>
+        <input type="text" id="company" name="company" required><br><br>
+
+        <label for="jobTitle">Job Title:</label><br>
+        <input type="text" id="jobTitle" name="jobTitle" required><br><br>
+
+        <label for="applicationDate">Application Date:</label><br>
+        <input type="date" id="applicationDate" name="applicationDate" required><br><br>
+
+        <label for="status">Status:</label><br>
+        <select name="status" id="status">
+            <option value="Applied">Applied</option>
+            <option value="Interviewing">Interviewing</option>
+            <option value="Offer">Offer</option>
+            <option value="Rejected">Rejected</option>
+        </select><br><br>
+
+        <label for="link">Job Posting Link (Optional):</label><br>
+        <input type="url" name="link" id="link"><br><br>
+
+        <label for="notes">Notes:</label><br>
+        <textarea name="notes" id="notes"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="Navbar.js"></script>
+</body>
+
+</html>
