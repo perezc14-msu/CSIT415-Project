@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
 <nav className="bg-purple-600 p-4 text-white flex justify-between items-center">
   <Link href="/" className="text-xl font-bold text-white bg-purple-500 p-3 rounded-lg cursor-pointer">
-    Job Flow
+    JobFlow
   </Link>
 
       <div className="flex gap-4">
@@ -25,7 +25,6 @@ const Navbar = () => {
         </SignedIn>
       </div>
     </nav>
-</nav>
   );
 };
 
