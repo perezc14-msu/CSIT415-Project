@@ -10,5 +10,7 @@ export default async function Home() {
       <h1>Welcome {welcomeSuffix} 👋!</h1>
       <p>Welcome to your job tracker dashboard!</p>
     </div>
+
+    
   );
 }
