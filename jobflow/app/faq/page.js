@@ -24,10 +24,16 @@ export default function FAQ() {
         </div>
 
         <div>
-          <p className="text-gray-700">Q: Another question?</p>
-          <p className="text-gray-700">A: Another answer.</p>
+          <p className="text-gray-700">Q: How can i ensure that my data isn't be sold to third parties?</p>
+          <p className="text-gray-700">A:still haven't figured that out.</p>
+        </div>
+
+        <div>
+          <p className="text-gray-700">Q: Is there a limit on how many applications can be tracked?</p>
+          <p className="text-gray-700">A: No there is no limit on how many applications can be tracked.You can apply to 1000 jobs and we will keep track of all your applications.</p>
         </div>
       </div>
     </div>
+    
   );
 }
