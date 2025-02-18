@@ -13,7 +13,10 @@ export default function RootLayout({ children }) {
         <body>
           <Navbar />
           <nav className="bg-purple-600 p-4 text-white">
-            <h1 className="text-2xl font-bold"><center>Job Flow</center> </h1>
+          <h1 className="text-5xl font-extrabold text-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white p-4 rounded-lg shadow-lg">
+  Job Flow
+</h1>
+
             <div>
               <SignedOut>
                 <SignInButton />
