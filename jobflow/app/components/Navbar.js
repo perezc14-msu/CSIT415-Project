@@ -5,10 +5,10 @@ import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@cl
 
 const Navbar = () => {
   return (
-    <nav className="bg-purple-600 p-4 text-white flex justify-between items-center">
-      <h1 className="text-xl font-bold text-white bg-purple-500 p-3 rounded-lg">
-        Job Flow
-      </h1>
+<nav className="bg-purple-600 p-4 text-white flex justify-between items-center">
+  <Link href="/" className="text-xl font-bold text-white bg-purple-500 p-3 rounded-lg cursor-pointer">
+    JobFlow
+  </Link>
 
       <div className="flex gap-4">
         <Link href="/">Home</Link>
