@@ -23,9 +23,9 @@ const Navbar = () => {
           <UserButton showName />
         </SignedIn>
       </div>
-    </nav>
+
 </nav>
-  );
+);
 };
 
 export default Navbar;
