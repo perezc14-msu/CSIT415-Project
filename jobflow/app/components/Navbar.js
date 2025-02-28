@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-
+import "./navbar.css";
 const Navbar = () => {
   return (
-<nav className="bg-purple-600 p-4 text-white flex justify-between items-center">
-  <Link href="/" className="text-xl font-bold text-white bg-purple-500 p-3 rounded-lg cursor-pointer">
+<nav className="backgroundColor:#6b46c1 p-4 text-white flex justify-between items-center">
+  <Link href="/" className="text-xl font-bold text-white backgroundColor:#6b46c1 p-3 rounded-lg cursor-pointer">
     JobFlow
   </Link>
 
@@ -25,6 +25,7 @@ const Navbar = () => {
         </SignedIn>
       </div>
     </nav>
+
   );
 };
 
