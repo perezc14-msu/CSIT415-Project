@@ -21,10 +21,12 @@
 
 /* Title styling */
 .title {
-    font-size: 30px;
+    font-family: 'Georgia', serif;
+    font-size: 80px;
     font-weight: bold;
     margin-bottom: 15px;
     color: white;
+    text-decoration: underline;
 }
 
 /* Separate container (description) */
@@ -42,14 +44,17 @@
 
 /* Description styling text */
 .description {
-    font-size: 16px;
+    font-family: 'Georgia', serif;
+    font-size: 35px;
     color: var(--secondary-color);
-    max-width: 80%;
+    width: 100%;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
+    line-height: 200%;
     display: block;
 
-    /*(max-width)the reason i added ths was for the text in the description to be 
+
+    /*(width)the reason i added ths was for the text in the description to be 
     within a readable width*/
 }
 
