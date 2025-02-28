@@ -1,10 +1,13 @@
-export default function About() {
-    return (
-      <div className="max-w-2xl mx-auto mt-10">
-        <h1 className="text-2xl font-bold mb-4">About Us</h1>
-        <p>This app helps you track job applications efficiently.</p>
-      </div>
-    );
-  }
+//this imports the css file
+import "./about.css"; 
 
-    
+export default function About() {
+  return (
+    <div className="container">
+      <h1 className="title">About Us</h1>
+      <p className="description">This app helps you track job applications efficiently.
+        sample text to test functionality</p>
+      <p className="description1">This is sample text</p>
+    </div>
+  );
+}
