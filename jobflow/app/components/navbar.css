@@ -21,22 +21,6 @@ nav {
     color: white;
 }
 
-/* This is for the logo */
-nav a:first-child {
-    font-size: 1.25rem;
-    font-weight: bold;
-    background-color: var(--primary-color); 
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-nav a:first-child:hover {
-    background-color: (--primary-color); 
-    transform: scale(1.05);
-}
-
 /* Navigation links */
 nav .flex a {
     text-decoration: none;
