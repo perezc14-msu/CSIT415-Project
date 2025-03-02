@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 'use client';
 
 import Link from 'next/link';
@@ -59,3 +60,33 @@ export default function Home() {
     </div>
   );
 }
+=======
+// app/page.js
+"use client";
+
+import { useEffect, useState } from "react";
+import AddApplication from "./components/AddApplication";
+import UserProvider from "./components/UserProvider";
+import { useUser } from "@clerk/nextjs";
+
+export default function Home() {
+    const { user } = useUser(); // Use Clerk's useUser hook
+    const [username, setUsername] = useState("");
+
+    useEffect(() => {
+        if (user) {
+            setUsername(user.firstName || user.lastName); // Set the username based on the user object
+        }
+    }, [user]);
+
+    return (
+        <UserProvider>
+            <div className="p-4">
+                <h1>Welcome {username} 👋!</h1>
+                <p>Welcome to your job tracker dashboard!</p>
+                <AddApplication />
+            </div>
+        </UserProvider>
+    );
+}
+>>>>>>> Stashed changes
