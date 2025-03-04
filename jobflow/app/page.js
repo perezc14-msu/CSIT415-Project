@@ -26,7 +26,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-content">
           <h1>Welcome to JobFlow</h1>
-          <p>Your ultimate job application tracker. Stay organized, stay ahead.</p>
+          <p>Your ultimate job application tracker. Stay organized, Stay ahead.</p>
           <button onClick={handleGetStarted} className="cta-button">
             Get Started
           </button>
