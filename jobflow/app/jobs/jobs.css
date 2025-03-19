@@ -201,7 +201,7 @@ body {
 }
 
 .edit-btn {
-  background-color: #4CAF50;
+  background-color: #1f72bb;
   color: white;
   margin-right: 5px;
 }
@@ -231,7 +231,7 @@ body {
 }
 
 .fab:hover {
-  background-color: #0056b3;
+  background-color: #6b46c1;
 }
 
 /* Footer */
@@ -295,13 +295,21 @@ body {
 }
 
 #addJob {
-  background-color: #007bff;
+  background-color: #10942a;
   color: white;
 }
 
+#addJob:hover {
+  background-color: #c3c3c3;
+}
+
 .cancel-btn {
-  background-color: #ccc;
-  color: #333;
+  background-color: #aaaaaa;
+  color: #ffffff;
+}
+
+.cancel-btn:hover {
+  background-color: #c3c3c3;
 }
 
 /*/
