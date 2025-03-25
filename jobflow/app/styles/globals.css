@@ -192,8 +192,8 @@ button:hover {
 .cta-button {
   padding: 12px 24px;
   font-size: 18px;
-  background-color: #fff;
-  color: #007bff;
+  background-color: #6b46c1;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -201,7 +201,7 @@ button:hover {
 }
 
 .cta-button:hover {
-  background-color: #f1f1f1;
+  background-color: #9f7aea;
 }
 
 .features {
