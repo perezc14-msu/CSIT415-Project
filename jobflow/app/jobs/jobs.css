@@ -184,7 +184,7 @@ body {
 }
 
 .job-table th {
-  background-color: #007bff;
+  background-color: #6b46c1;
   color: white;
 }
 
@@ -201,7 +201,7 @@ body {
 }
 
 .edit-btn {
-  background-color: #496dff;
+  background-color: #1f72bb;
   color: white;
   margin-right: 5px;
 }
@@ -296,13 +296,21 @@ body {
 }
 
 #addJob {
-  background-color: #00a226;
+  background-color: #10942a;
   color: white;
 }
 
+#addJob:hover {
+  background-color: #c3c3c3;
+}
+
 .cancel-btn {
-  background-color: #ccc;
-  color: #333;
+  background-color: #aaaaaa;
+  color: #ffffff;
+}
+
+.cancel-btn:hover {
+  background-color: #c3c3c3;
 }
 
 /*/

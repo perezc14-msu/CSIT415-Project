@@ -6,7 +6,6 @@
     --tertiary-color: #200599;
     --fifth-color: #8c5ae3;
     --red-color: #ff0000;
-    --lighter_purple:#d8bfd8;
 }
 
 
@@ -32,7 +31,7 @@ nav .flex a {
 
 /* The hovering effect for menu words */
 nav .flex a:hover {
-    color: var(--lighter_purple); 
+    color: var(--fifth-color); 
 }
 
 /* Styling for the links container */
