@@ -484,7 +484,7 @@ const JobSearchInsights = () => {
                     <div className="p-4 bg-blue-50 rounded-lg">
                       <h3 className="font-medium text-blue-800 mb-2">📈 Increase Application Volume</h3>
                       <p className="text-blue-700">
-                        You submitting about {insights.applicationsPerWeek} applications per week.
+                        You submitted about {insights.applicationsPerWeek} applications this week.
                         Research shows that candidates who apply to 5-10 relevant positions weekly
                         have significantly higher success rates.
                       </p>
