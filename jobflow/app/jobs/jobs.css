@@ -307,16 +307,17 @@ body {
 }
 
 #addJob:hover {
-  background-color: #c3c3c3;
+  background-color: #90EE90
+  ;
 }
 
 .cancel-btn {
-  background-color: #aaaaaa;
+  background-color: red;
   color: #ffffff;
 }
 
 .cancel-btn:hover {
-  background-color: #c3c3c3;
+  background-color: #FF6666;
 }
 
 /*/
