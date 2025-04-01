@@ -1,24 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-import "./navbar.css";
+import Image from "next/image";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
+
 const Navbar = () => {
   return (
-<nav className="backgroundColor:#6b46c1 p-4 text-white flex justify-between items-center">
-  <Link href="/" className="text-xl font-bold text-white backgroundColor:#6b46c1 p-3 rounded-lg cursor-pointer italic">
-    JobFlow
-  </Link>
+    <nav className="bg-[#6b46c1] p-4 text-white flex justify-between items-center">
+      {/* Logo only (rectangle, clickable) */}
+      <Link href="/" className="flex items-center">
+        <Image
+          src="/jobflow1.png"
+          alt="JobFlow Logo"
+          width={60}
+          height={400}
+          className="object-contain"
+        />
+      </Link>
 
-      <div className="flex gap-4">
+      {/* Navigation links and auth */}
+      <div className="flex gap-4 items-center">
         <Link href="/">Home</Link>
         <Link href="/jobs">My Applications</Link>
-        <Link href="/application">Analytics</Link>
+        <Link href="/Analytics">Analytics</Link>
         <Link href="/about">About</Link>
         <Link href="/faq">FAQ</Link>
+
         <SignedOut>
           <SignInButton />
-          <SignUpButton /> 
+          <SignUpButton />
         </SignedOut>
 
         <SignedIn>
@@ -26,7 +42,6 @@ const Navbar = () => {
         </SignedIn>
       </div>
     </nav>
-
   );
 };
 

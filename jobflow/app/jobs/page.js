@@ -8,7 +8,7 @@ export default function Page() {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({ company: '', position: '', status: 'Applied', appliedDate: '' });
+  const [formData, setFormData] = useState({ company: '', position: '', status: 'Applied', appliedDate: '', location: '', interviewDate: '' });
   const [userID, setUserID] = useState(null);
   const [editingJobId, setEditingJobId] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
@@ -62,14 +62,14 @@ export default function Page() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { company, position, status, appliedDate } = formData;
+    const { company, position, status, appliedDate, location, interviewDate } = formData;
 
-    if (!company || !position || !status || !appliedDate) {
+    if (!company || !position || !status || !appliedDate || !location || !interviewDate) {
       alert('Please fill all fields');
       return;
     }
 
-    const jobData = { company, position, status, applied_date: appliedDate, user_id: userID };
+    const jobData = { company, position, status, applied_date: appliedDate,location, interview_date: interviewDate, user_id: userID };
     const url = editingJobId ? `/api/jobs/${editingJobId}` : '/api/jobs';
     const method = editingJobId ? 'PUT' : 'POST';
 
@@ -103,7 +103,8 @@ export default function Page() {
 
   const handleEditJob = (job) => {
     setEditingJobId(job.id);
-    setFormData({ company: job.company, position: job.position, status: job.status, appliedDate: job.applied_date });
+    setFormData({ company: job.company, position: job.position, status: job.status, appliedDate: job.applied_date, location: job.location,
+      interviewDate: job.interview_date });
     setShowForm(true);
   };
 
@@ -120,7 +121,7 @@ export default function Page() {
   };
 
   const resetForm = () => {
-    setFormData({ company: '', position: '', status: 'Applied', appliedDate: '' });
+    setFormData({ company: '', position: '', status: 'Applied', appliedDate: '', location: '', interviewDate: ''});
     setEditingJobId(null);
     setShowForm(false);
   };
@@ -209,6 +210,8 @@ export default function Page() {
                 <th>Position</th>
                 <th>Status</th>
                 <th>Applied Date</th>
+                <th>Location</th>
+                <th>Interview Date</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -219,6 +222,8 @@ export default function Page() {
                   <td>{job.position}</td>
                   <td>{job.status}</td>
                   <td>{job.applied_date}</td>
+                  <td>{job.location}</td>
+                  <td>{job.interview_date}</td>
                   <td>
                     <button onClick={() => handleEditJob(job)} className="edit-btn">
                       Edit
@@ -283,6 +288,21 @@ export default function Page() {
                 type="date" 
                 name="appliedDate" 
                 value={formData.appliedDate} 
+                onChange={handleInputChange} 
+                required 
+              />
+              <input 
+                type="text" 
+                name="location" 
+                placeholder="Location" 
+                value={formData.location} 
+                onChange={handleInputChange} 
+                required 
+              />
+              <input 
+                type="date" 
+                name="interviewDate" 
+                value={formData.interviewDate} 
                 onChange={handleInputChange} 
                 required 
               />
