@@ -64,7 +64,7 @@ export default function Page() {
     e.preventDefault();
     const { company, position, status, appliedDate, location, interviewDate } = formData;
 
-    if (!company || !position || !status || !appliedDate || !location || !interviewDate) {
+    if (!company || !position || !status || !appliedDate || !location ) {
       alert('Please fill all fields');
       return;
     }
@@ -304,7 +304,6 @@ export default function Page() {
                 name="interviewDate" 
                 value={formData.interviewDate} 
                 onChange={handleInputChange} 
-                required 
               />
               <button id="addJob" type="submit">{editingJobId ? 'Update Job' : 'Add Job'}</button>
               <button type="button" onClick={resetForm} className="cancel-btn">
