@@ -290,6 +290,8 @@ export default function Page() {
               <button type="button" onClick={resetForm} className="cancel-btn">
                 Cancel
               </button>
+              Enter URL: 
+              <input type="text" name="urlLink" />
             </form>
           </div>
         </div>
