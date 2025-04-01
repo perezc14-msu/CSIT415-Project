@@ -9,7 +9,7 @@ export default function About() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowDescription(true);
-    }, 2000);
+    }, 1);
 
     return () => clearTimeout(timer);
   }, []);
