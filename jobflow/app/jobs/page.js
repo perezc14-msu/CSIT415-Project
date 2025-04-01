@@ -210,8 +210,8 @@ export default function Page() {
                 <th>Position</th>
                 <th>Status</th>
                 <th>Applied Date</th>
+                <th>Location</th>
                 <th>Interview Date</th>
-                <th>Actions</th>
                 <th>Actions</th>
               </tr>
             </thead>
