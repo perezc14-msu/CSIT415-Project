@@ -2,26 +2,29 @@
     --primary-color: #6b46c1;
     --secondary-color: #f0f0f0;
     --fifth-color: #8c5ae3;
+    --text-color: #333;
+    --bg-color: #fafafa;
 }
 
 .about-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
-    background-color: #ffffff;
+    padding: 60px 20px;
+    background-color: var(--bg-color);
+    text-align: center;
 }
+
 
 /* Title container */
 .container {
-    max-width: 90vw;
-    margin-bottom: 30px;
-    padding: 20px;
-    background: var(--primary-color); 
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
-    text-align: center;
+    background: var(--primary-color);
+    display: inline-block; /* Makes the box only as wide as the content */
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .container:hover {
@@ -33,32 +36,32 @@
     font-family: 'Georgia', serif;
     font-size: 32px;
     font-weight: bold;
-    color: white;
-    text-decoration: underline;
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4);
+    color: #fff;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Description box */
 .containerdescription {
-    max-width: 90vw;
-    padding: 20px;
-    background: var(--fifth-color); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 90px;
+    max-width: 800px;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
     animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 .description {
     font-family: 'Georgia', serif;
-    font-size: 20px;
-    color: var(--secondary-color);
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.7;
     text-align: left;
-    line-height: 1.8;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
