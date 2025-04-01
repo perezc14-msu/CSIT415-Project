@@ -19,6 +19,7 @@
 /* Title container */
 .container {
     background: var(--primary-color);
+    max-width: 800px;
     display: inline-block; /* Makes the box only as wide as the content */
     padding: 10px 20px;
     border-radius: 12px;
