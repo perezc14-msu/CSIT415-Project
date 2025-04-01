@@ -38,9 +38,15 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #c9c9c9;
+.edit-btn:hover {
+  background-color: #7bb5e0; /* Light blue */
 }
+
+.delete-btn:hover {
+  background-color: #f88c8c; /* Light red */
+}
+
+
 
 #addJob {
   margin-bottom: 20px;
