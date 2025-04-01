@@ -34,7 +34,6 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            // Close (X) icon
             <svg
               className="w-6 h-6"
               fill="none"
@@ -45,7 +44,6 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            // Hamburger icon
             <svg
               className="w-6 h-6"
               fill="none"
@@ -58,13 +56,13 @@ const Navbar = () => {
           )}
         </button>
 
-        {/* Desktop navigation links (hidden on small screens) */}
+        {/* Desktop navigation links */}
         <div className="hidden md:flex gap-4 items-center ml-auto">
-          <Link href="/">Home</Link>
-          <Link href="/jobs">My Applications</Link>
-          <Link href="/Analytics">Analytics</Link>
-          <Link href="/about">About</Link>
-          <Link href="/faq">FAQ</Link>
+          <Link href="/" className="hover:text-[#8c5ae3] transition">Home</Link>
+          <Link href="/jobs" className="hover:text-[#8c5ae3] transition">My Applications</Link>
+          <Link href="/Analytics" className="hover:text-[#8c5ae3] transition">Analytics</Link>
+          <Link href="/about" className="hover:text-[#8c5ae3] transition">About</Link>
+          <Link href="/faq" className="hover:text-[#8c5ae3] transition">FAQ</Link>
 
           <SignedOut>
             <SignInButton />
@@ -77,7 +75,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile dropdown menu (visible only when isOpen is true) */}
+      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center bg-[#6b46c1] text-white p-4 gap-2">
           <Link
