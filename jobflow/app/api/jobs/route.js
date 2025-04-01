@@ -24,13 +24,13 @@ export async function POST(req) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { company, position, status, applied_date } = await req.json();
+  const { company, position, status, applied_date, location, interview_date } = await req.json();
 
   // Insert the new job into the database
   const insert = db.prepare(
-    'INSERT INTO jobs (user_id, company, position, status, applied_date) VALUES (?, ?, ?, ?, ?)'
+    'INSERT INTO jobs (user_id, company, position, status, applied_date, location, interview_date) VALUES (?, ?, ?, ?, ?, ?, ?)'
   );
-  const result = insert.run(userId, company, position, status, applied_date);
+  const result = insert.run(userId, company, position, status, applied_date, location, interview_date);
 
   // Return the newly added job (with ID) so that the front-end can update its state
   const newJob = {
@@ -40,6 +40,8 @@ export async function POST(req) {
     position,
     status,
     applied_date,
+    location,
+    interview_date
   };
 
   return NextResponse.json({ success: true, job: newJob }, { status: 201 });
@@ -53,14 +55,14 @@ export async function PUT(req, { params }) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { company, position, status, applied_date } = await req.json();
+  const { company, position, status, applied_date, location, interview_date } = await req.json();
   const { id } = params;
 
   // Update the job with the new data
   const update = db.prepare(
-    'UPDATE jobs SET company = ?, position = ?, status = ?, applied_date = ? WHERE id = ? AND user_id = ?'
+    'UPDATE jobs SET company = ?, position = ?, status = ?, applied_date = ?, location = ?, interview_date = ? WHERE id = ? AND user_id = ?'
   );
-  update.run(company, position, status, applied_date, id, userId);
+  update.run(company, position, status, applied_date, location, interview_date, id, userId);
 
   // Return the updated job object
   const updatedJob = {
@@ -70,6 +72,8 @@ export async function PUT(req, { params }) {
     position,
     status,
     applied_date,
+    location,
+    interview_date
   };
 
   return NextResponse.json({ success: true, job: updatedJob });

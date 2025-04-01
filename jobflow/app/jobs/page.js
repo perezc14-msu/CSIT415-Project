@@ -261,7 +261,7 @@ export default function Page() {
                 type="text" 
                 name="company" 
                 placeholder="Company" 
-                value={formData.company} 
+                value={formData.company || ''} 
                 onChange={handleInputChange} 
                 required 
               />
@@ -269,7 +269,7 @@ export default function Page() {
                 type="text" 
                 name="position" 
                 placeholder="Position" 
-                value={formData.position} 
+                value={formData.position || ''} 
                 onChange={handleInputChange} 
                 required 
               />
@@ -287,7 +287,7 @@ export default function Page() {
               <input 
                 type="date" 
                 name="appliedDate" 
-                value={formData.appliedDate} 
+                value={formData.appliedDate || ''} 
                 onChange={handleInputChange} 
                 required 
               />
@@ -295,14 +295,14 @@ export default function Page() {
                 type="text" 
                 name="location" 
                 placeholder="Location" 
-                value={formData.location} 
+                value={formData.location || ''} 
                 onChange={handleInputChange} 
                 required 
               />
               <input 
                 type="date" 
                 name="interviewDate" 
-                value={formData.interviewDate} 
+                value={formData.interviewDate || ''} 
                 onChange={handleInputChange} 
               />
               <button id="addJob" type="submit">{editingJobId ? 'Update Job' : 'Add Job'}</button>

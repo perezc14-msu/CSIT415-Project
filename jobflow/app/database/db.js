@@ -14,7 +14,9 @@ db.exec(`
     company TEXT NOT NULL,
     position TEXT NOT NULL,
     status TEXT NOT NULL,
-    applied_date TEXT
+    applied_date TEXT,
+    location TEXT,
+    interview_date TEXT
   )
 `);
 
