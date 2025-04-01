@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Logo only (rectangle, clickable) */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/jobflow1.png"
+            src="/jobflow2.png"
             alt="JobFlow Logo"
             width={60}
             height={400}
