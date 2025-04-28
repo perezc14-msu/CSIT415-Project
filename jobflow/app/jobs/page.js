@@ -48,6 +48,31 @@ export default function Page() {
     checkAuth();
   }, [router]);
 
+  useEffect(() => {
+    const fetchNotifications = async () => {
+      try {
+        const response = await fetch('/api/notifications');
+        const jobs = await response.json();
+        if (jobs.length > 0) {
+          for (const job of jobs) {
+            if (Notification.permission === "granted") {
+              new Notification(`Interview Today!`, {
+                body: `You have an interview with ${job.company} for ${job.position}.`,
+              });
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching notifications:', error);
+      }
+    };
+
+
+    const interval = setInterval(fetchNotifications, 100 * 1000); //time
+
+    return () => clearInterval(interval);
+  }, []);
+
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -62,6 +87,17 @@ export default function Page() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (Notification && Notification.permission !== 'granted') {
+      try {
+        const permission = await Notification.requestPermission();
+        if (permission !== 'granted') {
+          alert('Please enable notifications to get reminders.');
+        }
+      } catch (err) {
+        console.error('Notification permission request failed:', err);
+      }
+    }
+
     const { company, position, status, appliedDate, location, interviewDate } = formData;
 
     if (!company || !position || !status || !appliedDate || !location ) {
